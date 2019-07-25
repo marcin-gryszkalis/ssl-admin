@@ -27,7 +27,7 @@
 # NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# VERSION: 1.2.1
+# VERSION: ~~~VERSION~~~
 # $Id: ssl-admin 355 2014-06-25 02:58:34Z ecrist $
 
 use strict;
@@ -258,7 +258,7 @@ sub gen_dh {
 sub main_menu {
 	update_serial();
 	print "\n\n=====================================================\n";
-	print '#               SSL-ADMIN v1.2.1                    #';
+	print '#               SSL-ADMIN v~~~VERSION~~~                    #';
 	print "\n=====================================================\n";
 	print "Please enter the menu option from the following list:\n";
 	print "1) Update run-time options:\n";
@@ -511,7 +511,7 @@ if ($> != 0){
 	if ($build eq "devel"){
 		print "\n\nRunning devel build - this isn't secure!\n\n";
 	} else {
-	die "Sorry, but I need to be run as the root user.\n\n";
+		die "Sorry, but I need to be run as the root user.\n\n";
 	}
 }
 

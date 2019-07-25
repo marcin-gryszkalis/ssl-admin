@@ -49,5 +49,5 @@ ssl-admin(1), openssl(1)
 .SH AUTHOR
 Eric Crist <ecrist@secure-computing.net>
 
-v1.2.1
+v~~~VERSION~~~
 $Id: ssl-admin.conf.5 356 2014-06-25 02:59:57Z ecrist $
