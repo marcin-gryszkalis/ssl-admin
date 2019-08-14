@@ -40,8 +40,7 @@ die "$config_file doesn't exist.  Did you copy the sample from $config_file.defa
 my $result = do $config_file;
 die "Syntax error in $config_file\n\n" unless ($result);
 
-$ENV{'KEY_DIR'} = "~~~ETCDIR~~~/ssl-admin";
-
+$ENV{'KEY_DIR'} = $ARGV[0] // "~~~ETCDIR~~~/ssl-admin";
 
 ### Program-specific settings here ###
 my $program_name = "ssl-admin";
@@ -49,6 +48,7 @@ my $build = "~~~BUILD~~~";
 my $menu_item = "";
 my $script_dir;
 my $working_dir = $ENV{'KEY_DIR'};
+die "working dir ($working_dir) does not exist" unless -d $working_dir;
 my $key_days = $ENV{'KEY_DAYS'};
 my $crl = "$working_dir/prog/crl.pem";
 my $key_config = "$working_dir/openssl.conf";
